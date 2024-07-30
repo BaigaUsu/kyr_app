@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    & .logo {
+        color: red;
+        font-family: sans-serif;
+    }
+}

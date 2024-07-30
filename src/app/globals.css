@@ -1,2 +1,7 @@
 @import url(../assets/styles/variables.css);
 @import url(../assets/styles/resets.css);
+
+.container {
+  margin: 0 auto;
+  padding: 0 70px;
+}
