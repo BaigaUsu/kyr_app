@@ -1,0 +1,49 @@
+.section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;   
+
+    .blur {
+        width: 675px;
+        height: 359px;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 1;
+        background: var(--blur2);
+        border-radius: 500%;
+        opacity: 1; 
+        filter: blur(30px); 
+    }
+
+    .picture {
+        position: relative;
+        z-index: 100;
+    }
+}
+
+.description {
+    margin-top: 50px;
+    text-align: left;
+    position: relative;
+
+    .title {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 50px;
+            width: 150px;
+            height: 4px;
+            background-color: #5856D6;
+        }
+    }
+
+    .text {
+        margin-right: -80px;
+    }
+}

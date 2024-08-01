@@ -2,5 +2,10 @@
     --primary: #D32029; 
     --primary1: #10243D;
     --button: #5856D6;
-
+    --blur1: linear-gradient(
+            to right, 
+            #6951AD 20%, 
+            #B3C0FF 20%
+        ); 
+    --blur2: #DEB9EB4D;
 }
