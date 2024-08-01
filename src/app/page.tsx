@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import styles from "./page.module.css";
 import Section_1 from "@/components/Main/Section_1";
 import Section_2 from "@/components/Main/Section_2";
@@ -13,6 +14,7 @@ export default function Home() {
       <Section_3/>
       <Section_4/>
       <Section_5/>
+      <Footer/>
     </main>
   );
 }
