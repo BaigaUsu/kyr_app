@@ -8,7 +8,7 @@ export default function Section_1() {
         <section className={styles.section}>
             <div className={styles.title}>
                 <MainTitle className={styles.mainTitle}>Изучайте кыргызский весело  с <span>KyrgyzApp</span></MainTitle>
-                <Button className={styles.button}>Начать</Button>
+                <Image src='/download.png' alt='' className={styles.image}width={300} height={300}/>
             </div>
             <div className={styles.picture}>
                 <div className={styles.blur1}></div>
