@@ -1,15 +1,49 @@
 .mainTitle {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 78px;
+    font-size: clamp(28px, 5vw, 56px); /* Adjusts between 28px and 56px based on viewport width */
+    line-height: clamp(39px, 7vw, 78px); /* Adjusts between 39px and 78px based on viewport width */
     color: var(--primary1);
+
+    @media (max-width: 1314px) {
+        font-size: 52px;
+    }
+
+    @media (max-width: 1216px) {
+        font-size: 47px;
+    }
+
+    @media (max-width: 1117px) {
+        line-height: 58px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 56px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 47px;
+    }
+
+    @media (max-width: 658px) {
+        font-size: 37px;
+    }
+
+    @media (max-width: 535px) {
+        font-size: 27px;
+        line-height: 38px;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
 
 .title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 54px;
+    font-size: clamp(18px, 4vw, 36px); /* Adjusts between 18px and 36px based on viewport width */
+    line-height: clamp(27px, 6vw, 54px); /* Adjusts between 27px and 54px based on viewport width */
     color: var(--primary);
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: clamp(7px, 3vw, 15px); /* Adjusts between 7px and 15px based on viewport width */
 }
