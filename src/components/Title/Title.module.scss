@@ -41,9 +41,25 @@
 
 .title {
     font-weight: 700;
-    font-size: clamp(18px, 4vw, 36px); /* Adjusts between 18px and 36px based on viewport width */
-    line-height: clamp(27px, 6vw, 54px); /* Adjusts between 27px and 54px based on viewport width */
+    font-size: clamp(18px, 4vw, 36px);
+    line-height: clamp(27px, 6vw, 54px);
     color: var(--primary);
     position: relative;
-    margin-bottom: clamp(7px, 3vw, 15px); /* Adjusts between 7px and 15px based on viewport width */
+    margin-bottom: clamp(7px, 3vw, 15px);
+
+    @media (max-width: 1168px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 535px) {
+        font-size: 26px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 23px;
+    }
 }

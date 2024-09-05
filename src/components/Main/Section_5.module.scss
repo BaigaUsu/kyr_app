@@ -4,22 +4,36 @@
     justify-content: space-between;
     padding: 50px 0;   
 
-    .blur {
-        width: 633px;
-        height: 447px;
-        position: absolute;
-        top: 0px;
-        right: -60px;
-        z-index: 1;
-        background: var(--blur2);
-        border-radius: 30%;
-        opacity: 0.8; 
-        filter: blur(30px); 
+    @media (max-width: 1024px) {
+        flex-direction: column;
     }
 
-    .picture {
+    .image {
+        flex: 55%;
         position: relative;
-        z-index: 100;
+
+        @media (max-width: 1024px) {
+            padding-top: 50px;
+            align-self: center;
+        }
+
+        .blur {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            right: -60px;
+            z-index: 1;
+            background: var(--blur2);
+            border-radius: 30%;
+            opacity: 0.8; 
+            filter: blur(30px); 
+        }
+
+        .picture {
+            position: relative;
+            z-index: 100;
+        }
     }
 }
 
@@ -27,6 +41,11 @@
     margin-top: 50px;
     text-align: left;
     position: relative;
+    flex: 45%;
+
+    @media (max-width: 1125px) {
+        margin-top: 0px;
+    }
 
     .title {
         position: relative;

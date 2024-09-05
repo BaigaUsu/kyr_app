@@ -15,8 +15,10 @@ export default function Section_5() {
                 </Description>
             </div>
 
-            <div className={styles.blur}></div>
-            <Image src='/picture5.svg' alt="group" className={styles.picture} width={646} height={399}/>
+            <div className={styles.image}>
+                <div className={styles.blur}></div>
+                <Image src='/picture5.svg' alt="group" className={styles.picture} width={646} height={399}/>
+            </div>
         </section>
     )
 }
