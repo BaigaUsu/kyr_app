@@ -1,6 +1,18 @@
 .description {
     font-weight: 400;
-    font-size: 24px;
-    line-height: 26.76px;
+    font-size: clamp(16px, 2.5vw, 24px); /* Пропорциональное изменение размера шрифта */
+    line-height: clamp(20px, 3vw, 26.76px); /* Пропорциональное изменение высоты строки */
     color: var(--primary1);
+
+    @media (max-width: 1168px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 535px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 12px;
+    }
 }
