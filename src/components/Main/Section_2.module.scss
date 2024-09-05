@@ -5,27 +5,34 @@
     margin-top: 100px;
     padding: 150px 0;
 
-    .blur {
-        width: 800px;
-        height: 700px;
-        position: absolute;
-        top: 0;
-        left: -100px;
-        z-index: 1;
-        background: var(--blur1);
-        border-radius: 50%;
-        opacity: 0.2; 
-        filter: blur(35px); 
+    .image {
+        flex: 55%;
+        
+        .blur {
+            width: 800px;
+            height: 700px;
+            position: absolute;
+            top: 0;
+            left: -100px;
+            z-index: 1;
+            background: var(--blur1);
+            border-radius: 50%;
+            opacity: 0.2; 
+            filter: blur(35px); 
+        }
+
+        .picture {
+            position: relative;
+            z-index: 100;
+            max-width: 100%;
+        }
     }
 
-    .picture {
-        position: relative;
-        z-index: 100;
-    }
-
+    
     .description {
         margin-top: 50px;
         text-align: right;
+        flex: 45%;
 
         .title {
             position: relative;
