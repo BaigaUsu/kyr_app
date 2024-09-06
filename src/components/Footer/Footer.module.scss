@@ -1,94 +1,111 @@
-.upperBlock {
-    background-color: var(--footerBg);
-    margin-left: -90px;
-    margin-right: -90px;
-
-    .title {
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 52px;
-        text-align: center;
-        color: #FFFFFF;
-        padding: 50px 0;
-    }
-
-    .download {
-        margin: 0 auto;
-    }
-
-    .bottomPictures {
-        display: flex;
-        margin-top: 30px;
-        padding-left: 100px;
-
-        .phone {
-            padding-bottom: 150px;
-            margin-right: 100px;
-            margin-left: 60px;
-        }
-
-        .ellipse {
-            padding-right: 30px;
-        // animation: rotate 15s linear infinite;
-        }
-        .notebook {
-            margin-bottom: 250px;
-            margin-left: 90px;
-        }
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
-}
-
 .bottomBlock {
     display: flex;
-    margin-top: 150px;
-    padding: 80px 150px;
-    background: radial-gradient( rgba(216, 158, 237, 0.3), rgba(255, 255, 255, 0) 100%);
-    margin-left: -90px;
-    margin-right: -90px;
+    flex-wrap: wrap; 
+    margin-top: clamp(50px, 10vw, 150px); /* Пропорциональный отступ сверху */
+    padding: clamp(40px, 10vw, 80px) clamp(20px, 10vw, 150px); /* Адаптивные внутренние отступы */
+    background: var(--footerBg);
+    margin-left: -90px; 
+    margin-right: -90px; 
+    color: white;
+
+    @media (max-width: 1200px) {
+        padding: clamp(20px, 8vw, 40px) clamp(10px, 8vw, 100px); /* Уменьшение отступов для экранов до 1200px */
+    }
+
+    @media (max-width: 1024px) {
+        padding: 50px 40px;
+        margin: 0 -40px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 20px 20px;
+    }
+
+    @media (max-width: 535px) {
+        margin: 0 -20px;
+    }
 
     .section {
-        flex: 1; 
-        margin-right: 10px;
+        flex: 1;
+        margin-right: clamp(5px, 2vw, 10px);
 
         & h3 {
             font-weight: 600;
-            font-size: 16px;
-            line-height: 28px;
-            margin-bottom: 10px;
+            font-size: clamp(12px, 2vw, 16px);
+            line-height: clamp(18px, 4vw, 28px);
+            margin-bottom: clamp(5px, 1vw, 10px); 
+
+            @media (max-width: 1024px) {
+                font-size: 14px;
+            }
         }
 
         & ul {
             font-weight: 600;
-            font-size: 14px;
-            line-height: 28px;
+            font-size: clamp(10px, 1.5vw, 14px); /* Пропорциональный размер шрифта для списка */
+            line-height: clamp(20px, 3vw, 28px); /* Пропорциональная высота строки */
             list-style-type: none;
             padding: 0;
             margin: 0;
+            transition: max-height 0.2s ease, opacity 0.3s ease;
+
+            @media (max-width: 1024px) {
+                font-size: 12px;
+            }
         }
 
         & li {
-            margin-bottom: 5px;
+            margin-bottom: clamp(2px, 1vw, 5px);
+            cursor: pointer;
         }
     }
-
-    
 
     .imageSection {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: clamp(10px, 2vw, 20px);
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
-    // .section:last-child {
-    //     margin-right: 0;
-    // }
+}
+
+@media (max-width: 600px) {
+  .bottomBlock {
+    flex-direction: column;
+  }
+
+  .section {
+    border-bottom: 1px solid #f3edf3;
+  }
+
+  .list {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+  }
+
+  .list.expanded {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .title {
+    padding-bottom: 10px;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  .title::after {
+    content: '>';
+    position: absolute; 
+    right: 30px;
+  }
+
+  .listItem {
+    padding-bottom: 7px;
+  }
 }

@@ -33,21 +33,6 @@
             border-radius: 50%;
             opacity: 0.2; 
             filter: blur(35px); 
-
-            //  @media (max-width: 1168px) {
-            //     top: 30px;
-            // }
-
-            // @media (max-width: 1024px) {
-            //     width: 100%;
-            //     top: clamp(250px, 20vh, 400px);
-            // }
-
-            // @media (max-width: 425px) {
-            //     bottom: 200px;
-            //     width: 100%;
-            //     height: 30%;
-            // }
         }
 
         .picture {
@@ -55,6 +40,10 @@
             z-index: 100;
             margin-left: 40px;
             margin-right: -92px;
+
+            @media (max-width: 768px) {
+                margin-left: 0;
+            }
         }
     }
 
@@ -74,6 +63,10 @@
                 width: 150px;
                 height: 4px;
                 background-color: #5856D6;
+
+                @media (max-width: 768px) {
+                    bottom: -5px;
+                }
             }
         }
     }

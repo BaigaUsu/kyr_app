@@ -57,10 +57,18 @@
             width: 150px;
             height: 4px;
             background-color: #5856D6;
+
+            @media (max-width: 768px) {
+                bottom: -5px;
+            }
         }
     }
 
     .text {
         margin-right: -50px;
+
+        @media (max-width: 1024px) {
+            margin-right: 0;
+        }
     }
 }

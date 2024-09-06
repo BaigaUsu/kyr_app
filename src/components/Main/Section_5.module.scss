@@ -28,6 +28,10 @@
             border-radius: 30%;
             opacity: 0.8; 
             filter: blur(30px); 
+
+            @media (max-width: 768px) {
+                right: 0;
+            }
         }
 
         .picture {
@@ -38,7 +42,6 @@
 }
 
 .description {
-    margin-top: 50px;
     text-align: left;
     position: relative;
     flex: 45%;
@@ -59,10 +62,18 @@
             width: 150px;
             height: 4px;
             background-color: #5856D6;
+
+            @media (max-width: 768px) {
+                bottom: -5px;
+            }
         }
     }
 
     .text {
         margin-right: -80px;
+
+        @media (max-width: 1024px) {
+            margin-right: 0;
+        }
     }
 }
